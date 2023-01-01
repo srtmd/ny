@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <meta property="og:image" content="https://cdn.discordapp.com/attachments/964288791869284383/1058894420096864367/nyer.png" />
+     <meta property="og:description" content="você recebeu uma mensagem. clique para abrir." />
+     <meta name="description" content="você recebeu uma mensagem. clique para abrir.">
+     <meta name="keywords" content="2023, new year, s2">
+     <title>Ei você!</title>
+     <link rel="stylesheet" href="css/master.css">
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/edgy.css">
+     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+     <script src="js/jquery.vide.js"></script>
+</head>
+<!-- Autoplay background video -->
+<body data-vide-bg="music/vid">
+      <!-- text in middle of screen -->
+     <h1>FELIZ ANO NOVO</h1>
+
+          <br>
+          <center><div id="clockDisplay" class="clockStyle"></div></center>
+          <!-- Clock script -->
+          <script>
+          function renderTime() {
+          var currentTime = new Date();
+          var diem = "am";
+          var h = currentTime.getHours();
+          var m = currentTime.getMinutes();
+          var s = currentTime.getSeconds();
+          setTimeout('renderTime()',1000);
+          if (h == 0) {
+               h = 12;
+          } else if (h > 12) { 
+               h = h - 12;
+               diem="pm";
+          }
+          if (h < 10) {
+               h = "0" + h;
+          }
+          if (m < 10) {
+               m = "0" + m;
+          }
+          if (s < 10) {
+               s = "0" + s;
+          }
+          var myClock = document.getElementById('clockDisplay');
+          myClock.textContent = h + ":" + m + ":" + s + " " + diem;
+          myClock.innerText = h + ":" + m + ":" + s + " " + diem;
+          }
+          renderTime();
+          </script><br>  
+          
+          
+          <pre>
+               <h2>Olá amigos!
+                    <br>Mais um ano acabando e queria agradecer<br>a cada um de vocês por estarem aqui!<br>Apesar do tempo não estar bom, esperamos que melhore,<br>e continuar com vocês nessa jornada da vida seria<br>o melhor presente neste fim de ano.<br><br>Novamente, obrigado a todos e um bom 2023 para nós!<br>
+          </pre>
+
+<!-- Links to pages -->
+<pre><p >[ <a id="copy" onclick="copyText()">copiar link</a> &zwnj;. <a href="https://s2.rip/r" >criador</a> ]</pre>
+    
+<!-- Autoplay music 
+<embed id="bgAudio" type="audio/mpeg" src="music/vid.mp3" autoplay="true" volume="20" height="0" width="200" autostart="true"> </embed> -->
+
+<audio autoplay id="myaudio" loop autostart="true" autoplay="true">
+  <source src="music/vid.mp3" type="audio/mpeg">
+</audio>
+<script>
+  var audio = document.getElementById("myaudio");
+  audio.volume = 0.1;
+</script>
+
+<script>
+function copyText() {
+navigator.clipboard.writeText
+("https://s2.rip/ny");
+alert("Link copiado!");
+}
+</script>
+
+</body>
+</html>
