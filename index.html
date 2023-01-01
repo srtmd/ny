@@ -60,7 +60,7 @@
           </pre>
 
 <!-- Links to pages -->
-<pre><p >[ <a id="copy" onclick="copyText()">copiar link</a> &zwnj;. <a href="https://s2.rip/r" >criador</a> ]</pre>
+<pre><p >[ <a id="copy" onclick="copyText()">copiar link</a> &zwnj;. <a href="https://s2.rip/r">criador</a> ]</pre>
     
 <!-- Autoplay music 
 <embed id="bgAudio" type="audio/mpeg" src="music/vid.mp3" autoplay="true" volume="20" height="0" width="200" autostart="true"> </embed> -->
@@ -72,12 +72,24 @@
   var audio = document.getElementById("myaudio");
   audio.volume = 0.1;
 </script>
-
+<!-- 
+navigator.clipboard.writeText("https://s2.rip/ny");
+alert("Link copiado!");
+-->
+<input type="text" value="https://s2.rip/ny" id="myInput" style="visibility:hidden">
 <script>
 function copyText() {
-navigator.clipboard.writeText
-("https://s2.rip/ny");
-alert("Link copiado!");
+var copyText = document.getElementById("myInput");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard
+      .writeText(copyText.value)
+      .then(() => {
+        alert("Link copiado!");
+      })
+      .catch(() => {
+        alert("Algo deu errado.");
+      });
 }
 </script>
 
